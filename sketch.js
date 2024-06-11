@@ -1,1 +1,34 @@
+//godzilla e kong:o novo império, 12, ação, aventura
+//viva:a vida é uma festa, Livre, animação, aventura
+//cruella, 12, aventura, comédia
+//a bela e a fera, Livre, animação, família
+//anabelle, 14, suspense, terror
+
+
+
+let campoIdade;
+
+function setup() {
+  createCanvas(400, 400);
+  campoIdade = createInput("5");
+}
+
+function draw() {
+  background(220);
+  let idade = campoIdade.value();
+  let recomendacao = geraRecomendacao(idade);
+  text(recomendacao, width / 2, height / 2);
+}
+
+function geraRecomendacao(idade) {
+  if(idade >= 10) {
+    if(idade >= 14) {
+      return "anabelle";
+    } else {
+      return "godzilla e kong:o novo império";
+    }
+  } else {
+    return "viva:a vida é uma festa";
+  }
+}
 
